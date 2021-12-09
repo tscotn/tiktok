@@ -20,7 +20,7 @@ For the exploratory data analysis part of the project we started with a correlat
 
 The next step was displaying in scatterplots the relationship between engagement and the other numerical variables in the data. From these we saw that the relationships between engagement and the other variables were not particularly strong among any of the predictors. We then turned to viewing the relationship between engagement and the categorical variables in the data. After creating side by side boxplots we found that there did not seem to be a significant difference in engagement based on whether or not an influencer is considered famous. We also observed that the gender of the influencer did not seem to have an affect on engagement level. The final boxplot however, revealed that there seems to be a difference in engagement levels based on the influencers ethnicity. On average it appears that latino and white influencers seem to have the highest engagement level, while influencers of south asian descent seem to have the lowest. We found these results to be surprising and at this time are not able to formulate a reasonable hypothesis as to why this is.
 
-![Engagement by Ethnicity](/assets/engagement_ethnicity.png)
+![Engagement by Ethnicity](/assets/engagement_eth.png)
 
 ### Method and Results
 
