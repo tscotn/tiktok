@@ -16,7 +16,11 @@ We removed a few columns before continuing the analysis. We removed total_views 
 
 For the exploratory data analysis part of the project we started with a correlation plot of the numerical variables in the data. As suspected we found a positive correlation between engagement and likes, along with a negative correlation between engagement and age since TikTok is a platform primarily dominated by young adults. It was surprising to find a negative correlation between engagement and followers. Perhaps those influencers who are very popular have a large number of followers who are inactive or are fake accounts who don’t interact with posts but exist solely to boost follower numbers.
 
+![Engagement by Numeric Features](/assets/engagement_numeric.png)
+
 The next step was displaying in scatterplots the relationship between engagement and the other numerical variables in the data. From these we saw that the relationships between engagement and the other variables were not particularly strong among any of the predictors. We then turned to viewing the relationship between engagement and the categorical variables in the data. After creating side by side boxplots we found that there did not seem to be a significant difference in engagement based on whether or not an influencer is considered famous. We also observed that the gender of the influencer did not seem to have an affect on engagement level. The final boxplot however, revealed that there seems to be a difference in engagement levels based on the influencers ethnicity. On average it appears that latino and white influencers seem to have the highest engagement level, while influencers of south asian descent seem to have the lowest. We found these results to be surprising and at this time are not able to formulate a reasonable hypothesis as to why this is.
+
+![Engagement by Ethnicity](/assets/engagement_ethnicity.png)
 
 ### Method and Results
 
@@ -24,7 +28,11 @@ Predicting engagement with a TikTok creator is a regression task, so we identifi
 
 We evaluated each model on its cross-validated mean squared error and found that the Elastic Net consistently outperformed any other model. The best parameters for that model were an penalty alpha of 0.25, an l1_ratio of 0.3 (telling us that this model uses more of an L2/Ridge penalty than an L1/Lasso Penalty to shrink coefficients), and only including interaction terms of the features.
 
+![RMSE by model](/assets/rmse)
+
 As Elastic Net models give easily interpretable results in the form of coefficients, we have an idea of which elements of a creator’s profile most affect their engagement rate. Ethnicity=White, Country=Mexico and Genre=Comedy had the largest positive effect on engagement and Ethnicity=South Asian, Country=India and Genre=Promotion had the largest negative effect on a given creator’s engagement rates.
+
+![Elastic Net Coefficients](/assets/coefs)
 
 Determining the reasons for these coefficients falls outside the scope of this project, but it is important to note that the size and age of the dataset leave much to be desired. A larger, more recent dataset could give stronger insights into the elements of a TikTok creator’s profile that most contribute to their engagement, and could be compared to this dataset to see if improvements have been made towards addressing algorithmic racial bias from the platform.
 
