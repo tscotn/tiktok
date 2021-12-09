@@ -28,11 +28,11 @@ Predicting engagement with a TikTok creator is a regression task, so we identifi
 
 We evaluated each model on its cross-validated mean squared error and found that the Elastic Net consistently outperformed any other model. The best parameters for that model were an penalty alpha of 0.25, an l1_ratio of 0.3 (telling us that this model uses more of an L2/Ridge penalty than an L1/Lasso Penalty to shrink coefficients), and only including interaction terms of the features.
 
-![RMSE by model](/assets/rmse)
+![RMSE by model](/assets/rmse.png)
 
 As Elastic Net models give easily interpretable results in the form of coefficients, we have an idea of which elements of a creator’s profile most affect their engagement rate. Ethnicity=White, Country=Mexico and Genre=Comedy had the largest positive effect on engagement and Ethnicity=South Asian, Country=India and Genre=Promotion had the largest negative effect on a given creator’s engagement rates.
 
-![Elastic Net Coefficients](/assets/coefs)
+![Elastic Net Coefficients](/assets/coefs.png)
 
 Determining the reasons for these coefficients falls outside the scope of this project, but it is important to note that the size and age of the dataset leave much to be desired. A larger, more recent dataset could give stronger insights into the elements of a TikTok creator’s profile that most contribute to their engagement, and could be compared to this dataset to see if improvements have been made towards addressing algorithmic racial bias from the platform.
 
